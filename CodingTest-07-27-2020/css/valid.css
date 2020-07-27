@@ -1,0 +1,28 @@
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+
+  input[type=text]:valid {
+    border: 2px solid green;
+  }
+
+  input[type=text]:invalid {
+    border: 2px solid red;
+  }
+
+  input[type=email]:valid {
+    border: 2px solid green;
+  }
+
+  input[type=email]:invalid {
+    border: 2px solid red;
+  }
+   
+  .set
+  {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+  }
