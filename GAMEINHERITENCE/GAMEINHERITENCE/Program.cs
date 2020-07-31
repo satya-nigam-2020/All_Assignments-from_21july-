@@ -23,14 +23,14 @@ namespace GAMEINHERITENCE
             Country = _country;
         }
 
-        public void WorldCup()
+        public void WorldCup(string country, string game)
         {
-            Console.WriteLine("WorldCup-{0}",year);
+            Console.WriteLine("{0} have won the {1} WorldCup : {2}",country,game,year);
         }
         public int Year
             {
-               get;
-               set;
+            get { return year; }
+            set { year = value; }
             }
     }
 
@@ -70,25 +70,17 @@ namespace GAMEINHERITENCE
 
     }
 
-    class ShowGameDetails   
+    class ShowGameDetails
     {
-        public void ShowCricketDetails()
+        public void ShowCricketDetails(string country, int noOfPlayers, string Coach)
         {
-            Console.WriteLine("--------------------------Cricket Information--------------------------------------------");
-            Console.WriteLine("Country : {0}");
-            Console.WriteLine("Country  :  {0} No. Of Player : {1}  Coach Name : {2}",Country, noOfPlayer,coach);
-           Console.WriteLine("Country  :  {0} No. Of Player : {1}  Coach Name : {2}",Country, noOfPlayer,coach);
-            Console.WriteLine();
-            Console.WriteLine();
+           
+            Console.WriteLine("Country: {0} No of Players :{1} Coach :{2} ", country, noOfPlayers, Coach);
         }
-
-        public void ShowFootBallDetails()
+        public void ShowFootBallDetails(string country, int noOfPlayers, string leageuname)
         {
-            Console.WriteLine("--------------------------FootBall Information--------------------------------------------");
-           // Console.WriteLine("Country  :  {0} No. Of Player : {1}  League Name : {2}",Country, noOfPlayer, Leaguename);
-           // Console.WriteLine("Country  :  {0} No. Of Player : {1}  League Name : {2}",Country, noOfPlayer, Leaguename);
-            Console.WriteLine();
-            Console.WriteLine();
+           
+            Console.WriteLine("Country: {0} No of Players :{1} Leaguename :{2} ", country, noOfPlayers, leageuname);
         }
     }
 
@@ -98,18 +90,31 @@ namespace GAMEINHERITENCE
         {
             
 
-            Cricket india=new Cricket(11,"India","Ravi Shastri");
-            Cricket aus=new Cricket(11,"Australia","Micle clark");
+            Cricket india=new Cricket();
+            Cricket aus=new Cricket();
 
-            FootBall england= new FootBall(14,"England","FIFA");
-             FootBall spain= new FootBall(13,"Spain","Spainish League");
+            FootBall england= new FootBall();
+            FootBall spain= new FootBall();
 
             ShowGameDetails d=new ShowGameDetails();
-            d.ShowCricketDetails();
+            Console.WriteLine("-----------------Cricket Information----------------------");
+            d.ShowCricketDetails("India", 11, "Ravi Shastri");
+            d.ShowCricketDetails("Australia", 11, "Micle Clark");
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("-----------------FootBall Information----------------------");
+            d.ShowFootBallDetails("England", 14, "English League");
+            d.ShowFootBallDetails("Spain", 13, "Spainish League");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
 
             Game g=new Game();
-            g.Year=2020;
-
+            g.Year=2011;
+            g.WorldCup("India", "Cricket");
+            g.WorldCup("Spain", "Football");
             Console.ReadLine();
         }
     }
