@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Assigment_4_July_2020.LinkedListDemo</StartupObject>
+    <StartupObject>Assigment_4_July_2020.LinkedListAssignment</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DictionaryDemo.cs" />
+    <Compile Include="LinkedListAssignment.cs" />
     <Compile Include="LinkedListDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
