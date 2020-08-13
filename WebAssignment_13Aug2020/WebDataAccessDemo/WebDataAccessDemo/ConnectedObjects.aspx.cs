@@ -173,5 +173,17 @@ namespace WebDataAccessDemo
             conn.Close();
             ShowGrid();
         }
+
+        protected void BtnIsp_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            cmd = new SqlCommand("insertSp", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@empName", SqlDbType.VarChar, 20).Value = (TxtEmpNane.Text);
+            cmd.Parameters.Add("@empSal", SqlDbType.Float).Value = Convert.ToSingle(TxtSal.Text);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            ShowGrid();
+        }
     }
 }

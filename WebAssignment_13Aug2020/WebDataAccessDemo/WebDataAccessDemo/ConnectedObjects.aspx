@@ -24,7 +24,7 @@
             EmpSalary<asp:TextBox ID="TxtSal" runat="server" Height="20px" OnTextChanged="TxtSal_TextChanged" style="margin-left: 68px" Width="177px"></asp:TextBox>
             <br />
             <asp:Button ID="BtnPara" runat="server" Height="36px" style="margin-left: 563px" Text="InsertUsingParameters" Width="158px" OnClick="BtnPara_Click" />
-            <asp:Button ID="BtnIsp" runat="server" style="margin-left: 34px; margin-top: 0px" Text="InsertusingSp" Width="134px" />
+            <asp:Button ID="BtnIsp" runat="server" style="margin-left: 34px; margin-top: 0px" Text="InsertusingSp" Width="134px" OnClick="BtnIsp_Click" />
             <br />
             <asp:Button ID="txtUpdate" runat="server" OnClick="txtUpdate_Click" style="margin-left: 341px" Text="Update" Width="134px" />
             <br />
