@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MVCAppWithAuthentication.Models.Customers>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<table class="table tab-content table-bordered table-responsive">
+    <tr>
+        <td>Customer Name</td>
+        <td>Discount Rate</td>
+        
+    </tr>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@Html.ActionLink(c.Name, "Details","Custmoers",
+               new { id = c.Id},null)</td>
+            <td>@c.MemberShipType.DisCountRate</td>
+        </tr>
+    }
+</table>
+
