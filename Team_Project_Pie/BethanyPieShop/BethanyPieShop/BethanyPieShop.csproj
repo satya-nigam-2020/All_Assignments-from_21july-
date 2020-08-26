@@ -185,6 +185,10 @@
     <Compile Include="Migrations\202008251542219_Creating ProductDetail Table and Adding Some Annotations.Designer.cs">
       <DependentUpon>202008251542219_Creating ProductDetail Table and Adding Some Annotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008260941355_Adding Image prop in ProductDetail table.cs" />
+    <Compile Include="Migrations\202008260941355_Adding Image prop in ProductDetail table.Designer.cs">
+      <DependentUpon>202008260941355_Adding Image prop in ProductDetail table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -276,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008251542219_Creating ProductDetail Table and Adding Some Annotations.resx">
       <DependentUpon>202008251542219_Creating ProductDetail Table and Adding Some Annotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008260941355_Adding Image prop in ProductDetail table.resx">
+      <DependentUpon>202008260941355_Adding Image prop in ProductDetail table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
