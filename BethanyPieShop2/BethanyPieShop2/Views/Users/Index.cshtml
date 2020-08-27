@@ -1,0 +1,62 @@
+﻿@model BethanyPieShop2.Models.Register
+
+@{ ViewBag.Title = "Index"; }
+
+
+
+<h2>Index</h2>
+@Html.Raw(ViewBag.Message)
+<div class="row">
+    <div class="col-md-3 col-md-offset-4">
+        <div style=" border:5px solid grey; padding:10px;">
+            @using (Html.BeginForm("Index", "Users", FormMethod.Post))
+            {
+<table height="200">
+    <tr>
+        <th>Login</th>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.EmailId)</td>
+        <td>
+            @Html.TextBoxFor(model => model.EmailId, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EmailId, "", new { @class = "text-danger" })
+        </td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+        <td>@Html.LabelFor(model => model.Password)</td>
+        <td>
+            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            <p class="text-danger">@ViewBag.ErrorMessage</p>
+
+
+
+        </td>
+
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="submit" value="Login" name="login" class="btn btn-info" />
+        </td>
+        <td>@Html.ActionLink("For register", "Register")</td>
+    </tr>
+</table>}
+        </div>
+    </div>
+</div>
+
+
+
