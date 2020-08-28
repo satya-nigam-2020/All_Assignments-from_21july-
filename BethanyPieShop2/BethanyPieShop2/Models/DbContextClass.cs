@@ -10,5 +10,7 @@ namespace BethanyPieShop2.Models
     {
         public DbSet<Register> Registers  { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<ProductDetail> ProductDetails { get; set; }
     }
 }
