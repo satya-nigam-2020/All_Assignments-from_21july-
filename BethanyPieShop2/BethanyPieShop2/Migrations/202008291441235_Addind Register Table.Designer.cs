@@ -7,13 +7,13 @@ namespace BethanyPieShop2.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddingCategoryTable : IMigrationMetadata
+    public sealed partial class AddindRegisterTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddingCategoryTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddindRegisterTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202008271613326_Adding  Category Table"; }
+            get { return "202008291441235_Addind Register Table"; }
         }
         
         string IMigrationMetadata.Source

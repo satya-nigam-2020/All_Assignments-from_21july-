@@ -127,29 +127,23 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductDetailsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202008271415559_Adding Register Table.cs" />
-    <Compile Include="Migrations\202008271415559_Adding Register Table.designer.cs">
-      <DependentUpon>202008271415559_Adding Register Table.cs</DependentUpon>
+    <Compile Include="Migrations\202008291111497_Adding cart.cs" />
+    <Compile Include="Migrations\202008291111497_Adding cart.designer.cs">
+      <DependentUpon>202008291111497_Adding cart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202008271421029_Adding  OrderDetail Table.cs" />
-    <Compile Include="Migrations\202008271421029_Adding  OrderDetail Table.designer.cs">
-      <DependentUpon>202008271421029_Adding  OrderDetail Table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008271613326_Adding  Category Table.cs" />
-    <Compile Include="Migrations\202008271613326_Adding  Category Table.designer.cs">
-      <DependentUpon>202008271613326_Adding  Category Table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008271617235_Adding  ProductDetail Table.cs" />
-    <Compile Include="Migrations\202008271617235_Adding  ProductDetail Table.designer.cs">
-      <DependentUpon>202008271617235_Adding  ProductDetail Table.cs</DependentUpon>
+    <Compile Include="Migrations\202008291441235_Addind Register Table.cs" />
+    <Compile Include="Migrations\202008291441235_Addind Register Table.designer.cs">
+      <DependentUpon>202008291441235_Addind Register Table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\DbContextClass.cs" />
     <Compile Include="Models\OrderDetail.cs" />
@@ -157,6 +151,8 @@
     <Compile Include="Models\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ProDetailsAndCatagory.cs" />
+    <Compile Include="ViewModel\ProductViewModel.cs" />
+    <Compile Include="ViewModel\RegisterAddViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -167,6 +163,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\pic1.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -199,9 +196,14 @@
     <Content Include="Views\ProductDetails\New.cshtml" />
     <Content Include="Views\ProductDetails\Create.cshtml" />
     <Content Include="Views\ProductDetails\Index.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\Address.cshtml" />
+    <Content Include="Views\Cart\orderDetail.cshtml" />
+    <Content Include="Views\Cart\Address2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -217,17 +219,11 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008271415559_Adding Register Table.resx">
-      <DependentUpon>202008271415559_Adding Register Table.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008291111497_Adding cart.resx">
+      <DependentUpon>202008291111497_Adding cart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008271421029_Adding  OrderDetail Table.resx">
-      <DependentUpon>202008271421029_Adding  OrderDetail Table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008271613326_Adding  Category Table.resx">
-      <DependentUpon>202008271613326_Adding  Category Table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008271617235_Adding  ProductDetail Table.resx">
-      <DependentUpon>202008271617235_Adding  ProductDetail Table.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008291441235_Addind Register Table.resx">
+      <DependentUpon>202008291441235_Addind Register Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

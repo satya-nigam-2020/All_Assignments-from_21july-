@@ -6,11 +6,9 @@ using System.Web;
 
 namespace BethanyPieShop2.ViewModel
 {
-    public class ProDetailsAndCatagory
+    public class RegisterAddViewModel
     {
-        public IEnumerable<Category> Catagories { get; set; }
-        public ProductDetail ProductDetail { get; set; }
-
-       
+        public IEnumerable<Register> Registers  { get; set; }
+        public Address Address { get; set; }
     }
 }

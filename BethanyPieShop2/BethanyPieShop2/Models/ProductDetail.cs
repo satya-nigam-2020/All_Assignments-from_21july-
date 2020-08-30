@@ -17,7 +17,7 @@ namespace BethanyPieShop2.Models
         public double Price { get; set; }
 
 
-        public byte[] Image { get; set; }
+        public string ImagePath { get; set; }
         public Category Catagory { get; set; }
         public int CatagoryId { get; set; }
     }
