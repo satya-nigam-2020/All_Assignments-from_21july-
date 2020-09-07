@@ -1,0 +1,25 @@
+﻿@model MVCAppWithAuthentication.Models.Customers
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Details</h2>
+
+<table class="table tab-content table-bordered table-responsive"
+    <tr>
+        <td>Name</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Membershiptype</td>
+        <td>@Model.MemberShipType.Name</td>
+    </tr>
+    <tr>
+        <td>Date Of Birth</td>
+        <td>@Model.DateOfBirth.ToShortDateString()</td>
+    </tr>
+</table>
+<br />
+<h4>@Html.CheckBoxFor(c => c.IsSubscribedToNewsLetter)</h4>
+
